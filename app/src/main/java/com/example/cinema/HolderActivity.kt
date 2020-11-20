@@ -1,5 +1,6 @@
 package com.example.cinema
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.koin.android.ext.android.inject
@@ -14,10 +15,16 @@ class HolderActivity : AppCompatActivity() {
     private val navigatorHolder: NavigatorHolder by inject(named(CINEMA_QUALIFIER))
     private val navigator = SupportAppNavigator(this, R.id.fragmentContainer)
 
+    companion object {
+        private const val KEY_IS_RECREATED = "KEY_IS_RECREATED"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        router.newRootScreen(MovieListScreen())
+        if (savedInstanceState == null) {
+            router.newRootScreen(MovieListScreen())
+        }
     }
 
     override fun onPause() {
@@ -28,5 +35,9 @@ class HolderActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         navigatorHolder.setNavigator(navigator)
+    }
+
+    override fun onBackPressed() {
+        router.exit()
     }
 }

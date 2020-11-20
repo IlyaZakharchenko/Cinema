@@ -27,6 +27,6 @@ data class MovieRemoteModel(
     val videoPath: String,
     @SerializedName("vote_average")
     val averageVote: Double,
-    @SerializedName("voteCount")
+    @SerializedName("vote_count")
     val voteCount: Int
 )

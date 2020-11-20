@@ -3,7 +3,6 @@ package com.example.cinema.data
 import com.example.cinema.data.remote.model.GenreRemoteModel
 import com.example.cinema.data.remote.model.MovieRemoteModel
 import com.example.cinema.data.remote.model.PageRemoteModel
-import com.example.cinema.model.GenreModel
 import com.example.cinema.model.MovieModel
 import com.example.cinema.model.PageModel
 
@@ -27,4 +26,4 @@ fun MovieRemoteModel.mapToUi(): MovieModel =
         voteCount
     )
 
-fun GenreRemoteModel.mapToUi(): GenreModel = GenreModel(name)
+fun GenreRemoteModel.mapToUi(): String = name

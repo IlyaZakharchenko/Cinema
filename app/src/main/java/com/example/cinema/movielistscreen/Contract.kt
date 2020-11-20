@@ -5,16 +5,19 @@ import com.example.cinema.model.MovieModel
 
 data class ViewState(
     val status: STATUS,
-    val movieList: List<MovieModel>
+    val movieList: List<MovieModel>,
+    val errorMessage: Int?
 )
 
 sealed class UiEvent : Event {
-    data class OnMovieClick(val position: Int) : UiEvent()
+    data class OnMovieClick(val movieModel: MovieModel) : UiEvent()
+    object OnRetry: UiEvent()
 }
 
 sealed class DataEvent : Event {
-    object RequestMovies : DataEvent()
+    object OnRequestMovies : DataEvent()
     data class OnMoviesRequestSuccess(val movieList: List<MovieModel>) : DataEvent()
+    data class OnError(val errorMessage: Int?): DataEvent()
 }
 
 enum class STATUS {

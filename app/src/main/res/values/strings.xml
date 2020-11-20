@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Cinema</string>
     <string name="movie_poster_content_descr">Movie poster</string>
+
+    <string name="format_genres">%s, %s</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_try_again">Retry</string>
+    <string name="connection_error">No internet connection</string>
+    <string name="data_load_error">Error while loading data</string>
+    <string name="movie_watch_now">Watch now</string>
 </resources>

@@ -5,10 +5,14 @@ import com.example.cinema.model.MovieModel
 
 data class ViewState(
     val status: STATUS,
-    val movieModel: MovieModel?
+    val movieModel: MovieModel,
+    val isPlayerShown: Boolean
 )
 
-sealed class UiEvent : Event
+sealed class UiEvent : Event {
+    object OnPlayClicked: UiEvent()
+    object OnFullscreenClicked: UiEvent()
+}
 
 sealed class DataEvent : Event
 

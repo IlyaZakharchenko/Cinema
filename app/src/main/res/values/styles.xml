@@ -1,10 +1,75 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.Material" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Text" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="Text.Large">
+        <item name="android:textSize">@dimen/textSizeLarge</item>
+    </style>
+
+    <style name="Text.Large.Secondary">
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Text.Large.Title">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Large.Title.Inverse">
+        <item name="android:textColor">@color/colorTextInverse</item>
+    </style>
+
+    <style name="Text.Medium">
+        <item name="android:textSize">@dimen/textSizeMedium</item>
+    </style>
+
+    <style name="Text.Medium.Secondary">
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Text.Medium.Title">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Medium.Title.Inverse">
+        <item name="android:textColor">@color/colorTextInverse</item>
+    </style>
+
+    <style name="Text.Small">
+        <item name="android:textSize">@dimen/textSizeSmall</item>
+    </style>
+
+    <style name="Text.Small.Secondary">
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="Text.Small.Title">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Small.Title.Inverse">
+        <item name="android:textColor">@color/colorTextInverse</item>
     </style>
 
 </resources>
